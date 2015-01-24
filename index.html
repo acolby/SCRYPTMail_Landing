@@ -1,6 +1,52 @@
 <!doctype html>
 <html lang="en">
 
+<style>
+
+    .hasSMailOverlay {
+        overflow:hidden;
+        position:relative;
+    }
+
+    .sMailOverlay {
+        background:rgba(0,0,0,.80);
+        text-align:center;
+        opacity:0;
+        height:100%;
+        width:100%;
+        -webkit-transition: opacity .50s ease;
+        -moz-transition: opacity .50s ease;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        border-radius: 3px 3px 0px 0px;
+    }
+
+    .sMailOverlay p{
+        color:white;
+        padding:10px;
+        line-height: 18px;
+    }
+
+    .sMailOverlay > p {
+        width:100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+
+    .hasSMailOverlay:hover .sMailOverlay  {
+        opacity:1;
+    }
+
+    .marginBottom50{
+        margin-bottom: 50px !important;
+    }
+</style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Responsive Bootstrap 3 Startup and Multipurpose Template">
@@ -109,7 +155,7 @@
 
                         <!-- NAVIGATION LINK -->
                         <ul class="nav navbar-nav navbar-left main-navigation small-text">
-                            <li><a href='#' onclick='scrollToPosition($("#section1").offset())'>features</a></li>
+                            <li><a href='#' onclick='scrollToPosition($("#section1").offset())'>service</a></li>
                             <li><a href='#'>blog</a></li>
                             <li><a href='#'>how to use</a></li>
                             <!-- <li><a href="http://example.com" class="external">External Link Example</a></li> -->
@@ -168,56 +214,184 @@
             <div class="section-header">
 
                 <div class="small-text-medium uppercase colored-text">
-                    Features
+                    Service
                 </div>
-                <h2 class="dark-text"><strong>We Startup</strong> Ipsum Product</h2>
+                <h2 class="dark-text">Why <strong>SCRYPTMail?</strong></h2>
                 <div class="colored-line">
                 </div>
                 <div class="sub-heading">
-                    Cloud computing subscription model out of the box proactive solution.
+                    SCRYPTMail hides all of the techical details and delivers usable, secure email
                 </div>
+
+                
             </div>
 
             <div class="row">
 
                 <!-- SINGLE SERVICE -->
                 <div class="col-md-4 wow fadeInLeft" data-wow-offset="10" data-wow-duration="1.75s">
-                    <div class="single-service border-bottom-hover">
+                    <div class="single-service marginBottom50 border-bottom-hover hasSMailOverlay">
                         <div class="service-icon colored-text">
-                            <span class="icon-basic-webpage-multiple"></span>
+                            <span class="icon-basic-heart"></span>
                         </div>
-                        <h3 class="colored-text">Simple Layout</h3>
-                        <p>
-                            Accelerator photo sharing business school drop out ramen hustle crush it revenue traction platforms.
-                        </p>
+                        <h3 class="colored-text">Genuine</h3>
+
+                        <div class="sMailOverlay">
+                            <p>
+                                <strong>We promise not to confuse nor misrepresent your security risks.</strong>
+                                <br>
+                                <br>
+                                Trust is the cornerstone of any business, but many companies fall short by trying to emphasize benefits and hide downsides. We promise to be transparent and open in order to provide you with objective information about our technologies.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
+
                 <!-- SINGLE SERVICE -->
-                <div class="col-md-4 wow flipInY" data-wow-offset="10" data-wow-duration="1s">
-                    <div class="single-service border-bottom-hover">
+                <div class="col-md-4 wow fadeInLeft" data-wow-offset="10" data-wow-duration="1.75s">
+                    <div class="single-service marginBottom50 border-bottom-hover hasSMailOverlay">
                         <div class="service-icon colored-text">
-                            <span class="icon-ecommerce-graph3"></span>
+                            <span class="icon-basic-case"></span>
                         </div>
-                        <h3 class="colored-text">Smart Graphs</h3>
-                        <p>
-                            Coworking viral landing page user base minimum viable product hackathon API mashup FB Connect.
-                        </p>
+                        <h3 class="colored-text">Private</h3>
+                        <div class='sMailOverlay'>
+                            <p>
+                                Your emails and data are encrypted end-to-end with a secret phrase that never leaves your computer. As a result, we can't scan nor read your emails.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- SINGLE SERVICE -->
                 <div class="col-md-4 wow fadeInRight" data-wow-offset="10" data-wow-duration="1.75s">
-                    <div class="single-service border-bottom-hover">
+                    <div class="single-service marginBottom50 border-bottom-hover hasSMailOverlay">
                         <div class="service-icon colored-text">
-                            <span class="icon-basic-geolocalize-05"></span>
+                            <span class="icon-man-people-streamline-user"></span>
                         </div>
-                        <h3 class="colored-text">Track Location</h3>
-                        <p>
-                            Social bookmarking group buying crowded market pivot onboarding freemium prototype ping.
-                        </p>
+                        <h3 class="colored-text">Anonymous</h3>
+                        <div class='sMailOverlay'>
+                            <p>
+                                <strong> Can you be truly anonymous on internet</strong>
+                                <br>
+                                <br>
+                                Unfortunately, the answer is no. In order to establish a connection with a server, you have to provide an IP address that can be tracked back to your computer. It does not matter if we store logs or not because that is what your provider does.
+                            </p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- SINGLE SERVICE -->
+                <div class="col-md-4 wow flipInY" data-wow-offset="10" data-wow-duration="1s">
+                    <div class="single-service marginBottom50 border-bottom-hover hasSMailOverlay">
+                        <div class="service-icon colored-text">
+                            <span class="icon-close-alt2"></span>
+                        </div>
+                        <h3 class="colored-text">No scripts third party servers</h3>
+                        <div class='sMailOverlay'>
+                            <p>
+                                We deliver all scripts from our servers. No Google Analytics, Facebook or twitter. While such scripts can be useful to us as service to track usage, they leak metadata like user information, location and more.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SINGLE SERVICE -->
+                <div class="col-md-4 wow flipInY" data-wow-offset="10" data-wow-duration="1s">
+                    <div class="single-service marginBottom50 border-bottom-hover hasSMailOverlay">
+                        <div class="service-icon colored-text">
+                            <span class="icon-basic-elaboration-todolist-check"></span>
+                        </div>
+                        <h3 class="colored-text">PGP & NIST recommendations</h3>
+                        <div class='sMailOverlay'>
+                            <p>
+                                <strong>Standard protocol to exchange public keys between users.</strong>
+                                <br>
+                                <br>
+                                The email you are about to send will be encrypted by AES with random 256 bit key and then key encrypted with the public key of intended recipient. Only the person with whom you are corresponding private key to will be able to decrypt it. We use only open source encryption libraries to ensure public audit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SINGLE SERVICE -->
+                <div class="col-md-4 wow fadeInRight" data-wow-offset="10" data-wow-duration="1.75s">
+                    <div class="single-service marginBottom50 border-bottom-hover hasSMailOverlay">
+                        <div class="service-icon colored-text">
+                            <span class="icon-basic-world"></span>
+                        </div>
+                        <h3 class="colored-text">Grade A HTTPS encryption</h3>
+                        <div class='sMailOverlay'>
+                            <p>
+                                <strong>Heartbleed attack? POODLE or BEAST? - We got you covered.</strong>
+                                <br>
+                                <br>
+                                We are regularly testing our service with third party security services to ensure up to date communication protection. 
+                                * Based on Qualys SSL <a href='https://www.ssllabs.com/ssltest/index.html' target='_blank'>evaluation<a>.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SINGLE SERVICE -->
+                <div class="col-md-4 wow fadeInRight" data-wow-offset="10" data-wow-duration="1.75s">
+                    <div class="single-service marginBottom50 border-bottom-hover hasSMailOverlay">
+                        <div class="service-icon colored-text">
+                            <span class=" icon-basic-lock"></span>
+                        </div>
+                        <h3 class="colored-text">Encrypted</h3>
+                        <div class='sMailOverlay'>
+                            <p>
+                                <strong>We mean it, no half measures. Your message encrypted from start to finish.</strong>
+                                <br>
+                                <br>
+                                Many similar services advertise email encryption, but not all of them truly encrypt your emails. Attachments, recipients, other metadata often are left in clear text. We encrypt all of it!* 
+                                * Not applicable if you are sending an email to third party servers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SINGLE SERVICE -->
+                <div class="col-md-4 wow fadeInRight" data-wow-offset="10" data-wow-duration="1.75s">
+                    <div class="single-service marginBottom50 border-bottom-hover hasSMailOverlay">
+                        <div class="service-icon colored-text">
+                            <span class="icon-basic-elaboration-browser-plus"></span>
+                        </div>
+                        <h3 class="colored-text">Freedom and Simplicity</h3>
+                        <div class='sMailOverlay'>
+                            <p>
+                                <strong>Who told you that privacy should be compromised for simplicity?</strong>
+                                <br>
+                                <br>
+                                We spent a lot of time making a simple but well protected tool. We won't overwhelm you with knobs and switches, but we won't repel you either. Features will be added to your settings panel and will have default values until you decide to change them. 
+                                We also will give you access to regenerate your RSA keys anytime you want or even let you save them offline.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SINGLE SERVICE -->
+                <div class="col-md-4 wow fadeInRight" data-wow-offset="10" data-wow-duration="1.75s">
+                    <div class="single-service marginBottom50 border-bottom-hover hasSMailOverlay">
+                        <div class="service-icon colored-text">
+                            <span class="icon-basic-paperplane"></span>
+                        </div>
+                        <h3 class="colored-text">Send Anywhere</h3>
+                        <div class='sMailOverlay'>
+                            <p>
+                                <strong>Send email in clear text or encrypted text.</strong>
+                                <br>
+                                <br>
+                                Clear text messages will be deleted from our servers immediately after successful delivery to the recipient’s domain. Encrypted messages will require PIN to unlock and decrypt. You provide this PIN via another means of communication like in a phone call, via text or in person.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
 
             </div>
         </div>
